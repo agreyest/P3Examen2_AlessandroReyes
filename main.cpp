@@ -94,7 +94,7 @@ int main(int argc, char** argv) {
 
 Nodo* operacion(Object* pOperador, Object* pOperando1 , Object* oOperando2){//operador, matriz, matriz
 	if( pOperador == new Operador('+') ){
-		
+		int** mat1 =pOperando1->getMatriz();
 	}else if( pOperador == new Operador('-') ){
 		
 	}else if( pOperador == new Operador('*') ){
