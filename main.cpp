@@ -18,9 +18,7 @@ using std::sqrt;
 #include "Operador.h"
 #include "Archivo.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-Object* suma(Object*, Object*, Object*);//operador, matriz, matriz
-Object* resta(Object*, Object*, Object*);//operador, matriz, matriz
-Object* multiplicacion(Object*, Object*, Object*);//operador, matriz, matriz
+Nodo* operacion(Object*, Object*, Object*);//operador, matriz, matriz
 
 int main(int argc, char** argv) {
 	Archivo* Amatrices = new Archivo("Matrices.txt");
@@ -83,8 +81,23 @@ int main(int argc, char** argv) {
 					}
 				}
 				
-			}
+			}//fin for para push a la pila
+			
+			Nodo* operando1 = lista->pop();
+			Nodo* operador = lista->pop();
+			Nodo* operando2 = lista->pop();
+			
 		}//fin else
 	}//fin while
 	return 0;
+}
+
+Nodo* operacion(Object* pOperador, Object* pOperando1 , Object* oOperando2){//operador, matriz, matriz
+	if( pOperador == new Operador('+') ){
+		
+	}else if( pOperador == new Operador('-') ){
+		
+	}else if( pOperador == new Operador('*') ){
+		
+	}
 }
